@@ -26,7 +26,7 @@ class _PostScreenState extends State<PostScreen> {
       onWillPop: () async {
         SystemNavigator.pop();
         return true;
-      },
+      }, 
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {
@@ -125,8 +125,8 @@ class _PostScreenState extends State<PostScreen> {
                                 Navigator.pop(context);
                                 showMyDialog(title, id);
                               },
-                              leading: Icon(Icons.edit),
-                              title: Text("Edit"),
+                              leading: const Icon(Icons.edit),
+                              title: const Text("Edit"),
                             ),
                           ),
                           PopupMenuItem(
@@ -136,8 +136,8 @@ class _PostScreenState extends State<PostScreen> {
                                 Navigator.pop(context);
                                 ref.child(id).remove();
                               },
-                              leading: Icon(Icons.delete),
-                              title: Text("Delete"),
+                              leading: const Icon(Icons.delete),
+                              title: const Text("Delete"),
                             ),
                           )
                         ],
